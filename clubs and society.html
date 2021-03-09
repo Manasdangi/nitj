@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Clubs and Societies</title>
+   <link rel = "icon" href = "https://upload.wikimedia.org/wikipedia/en/thumb/b/b7/Mnit_logo.png/220px-Mnit_logo.png" type = "image/x-icon"> 
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+ <style>
+body{background-color:grey;}
+p{font-family: cursive;
+text-align: center;
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.m{
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+  width:40%;
+  margin:auto;
+
+}
+#k{
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<div >
+ <p ><b><u>CLUBS AND SOCIETIES </u></b><br>
+<p> There are many clubs and groupes for students interested in differents field.<br>
+  These clubs are very important for self developement and leadership skills.<br><br><u>Registered clubs</u><br>
+  1.Musical and spic macay<br>
+    2.film and photography<br>
+      3.dramaticsy<br>
+        4.technical society<br>
+          5.literary clubs<br>
+            6.National service scheme<br>
+              7.Students mentorship programme<br>
+                8.fine arts<br><br>
+      <u> Un-official clubs</u><br>
+      1.rotaract society<br>
+      2. hope clubs<br>
+      3.ED-cell<br>
+      4.Mavericks<br>
+</div>
+<br>
+
+
+  <script>
+    const calcy=()=>{ 
+      let fname=document.getElementById('fname').value;
+      if(fname<1000)
+      alert('All branch');
+      else if(fname>=1000 && fname<4000)
+      alert('All branch except CSE');
+      else if(fname>=4000 && fname<10000)
+      alert('ME,EE,META,CIVIL,CHEMICAL');
+      else if(fname>=10000 && fname<15000)
+      alert('CIVIL,META,CHEMICAL');
+      else if(fname<30000)
+      alert('META,CHEMICAL');
+      else
+      alert('Not eligible');
+      
+      
+    }
+  </script>
+</body>
+</html>
