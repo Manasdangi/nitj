@@ -43,9 +43,14 @@ input[type=submit]:hover {
   margin:auto;
 
 }
+#id{
+  font-size: xx-large;
+}
 #k{
   text-align: center;
 }
+
+
 </style>
 </head>
 <body>
@@ -55,28 +60,444 @@ input[type=submit]:hover {
 <div class="m">
   <p style="text-align: center;">BRANCH PREDICTOR</p>
   <form >
-   <input type="text" id="fname" name="firstname" placeholder="Your rank">
-    <input type="submit" value="Submit" onclick="calcy()">
-  </form>
+   <input type="text" id="fname" name="firstname" placeholder="Enter your jee main rank">
+   <select name="ctgry" id="category">
+    <option value="g">General</option>
+    <option value="e">EWS</option>
+    <option value="o">OBC</option>
+    <option value="s">SC/ST</option>
+    <option value="p">Pwd</option>
+  </select> 
+  <select name="qta" id="quota">
+    <option value="hs">Home state</option>
+    <option value="os">Other state</option>
+  </select> 
+  <select name="fem" id="female">
+    <option value="fm">Female </option>
+    <option value="nfm">Female-neutral</option>
+  </select> 
+   <input type="submit" value="Submit" onclick="calcy()">
+   
+    <p id="show"></p>
+  </form></div>
   
   <script>
-    const calcy=()=>{ 
-      let fname=document.getElementById('fname').value;
-      if(fname<1000)
+
+ const calcy=()=>{ 
+  let fname=document.getElementById('fname').value;
+  let category=document.getElementById('category').value;
+  let quota=document.getElementById('quota').value;
+  let female=document.getElementById('female').value;
+  if(fname==""){
+    alert("EMPTY FIELD");}
+    else{
+
+      
+      if(category=='g'){
+  if(quota=='hs'){
+    if(female=='fm'){
+      if(!isNaN(fname)){
+      if(fname<8000)
       alert('All branch');
-      else if(fname>=1000 && fname<4000)
+      else if(fname>=8000 && fname<10000)
       alert('All branch except CSE');
-      else if(fname>=4000 && fname<10000)
-      alert('ME,EE,META,CIVIL,CHEMICAL');
       else if(fname>=10000 && fname<15000)
+      alert('ME,EE,META,CIVIL,CHEMICAL');
+      else if(fname>=15000 && fname<20000)
       alert('CIVIL,META,CHEMICAL');
-      else if(fname<30000)
+      else if(fname<25000)
       alert('META,CHEMICAL');
       else
       alert('Not eligible');
-      
-      
+   }
+   else
+   alert("enter valid input");
     }
+    else{
+    if(!isNaN(fname)){
+      if(fname<5000)
+      alert('All branch');
+      else if(fname>=5000 && fname<10000)
+      alert('All branch except CSE');
+      else if(fname>=10000 && fname<15000)
+      alert('ME,EE,META,CIVIL,CHEMICAL');
+      else if(fname>=15000 && fname<20000)
+      alert('CIVIL,META,CHEMICAL');
+      else if(fname<25000)
+      alert('META,CHEMICAL');
+      else
+      alert('Not eligible');
+   }
+   else
+   alert("enter valid input");
+  }
+}
+  else{
+    if(female=='fm'){
+      if(!isNaN(fname)){
+      if(fname<5000)
+      alert('All branch');
+      else if(fname>=5000 && fname<10000)
+      alert('All branch except CSE');
+      else if(fname>=10000 && fname<15000)
+      alert('ME,EE,META,CIVIL,CHEMICAL');
+      else if(fname>=15000 && fname<20000)
+      alert('CIVIL,META,CHEMICAL');
+      else if(fname<25000)
+      alert('META,CHEMICAL');
+      else
+      alert('Not eligible');
+   }
+   else
+   alert("enter valid input");
+    }
+    else{
+    if(!isNaN(fname)){
+      if(fname<5000)
+      alert('All branch');
+      else if(fname>=5000 && fname<10000)
+      alert('All branch except CSE');
+      else if(fname>=10000 && fname<15000)
+      alert('ME,EE,META,CIVIL,CHEMICAL');
+      else if(fname>=15000 && fname<20000)
+      alert('CIVIL,META,CHEMICAL');
+      else if(fname<25000)
+      alert('META,CHEMICAL');
+      else
+      alert('Not eligible');
+   }
+   else
+   alert("enter valid input");
+  }
+}
+}
+    
+      
+else if(category=='e'){
+  if(quota=='hs'){
+    if(female=='fm'){
+      if(!isNaN(fname)){
+      if(fname<8000)
+      alert('All branch');
+      else if(fname>=8000 && fname<10000)
+      alert('All branch except CSE');
+      else if(fname>=10000 && fname<15000)
+      alert('ME,EE,META,CIVIL,CHEMICAL');
+      else if(fname>=15000 && fname<20000)
+      alert('CIVIL,META,CHEMICAL');
+      else if(fname<25000)
+      alert('META,CHEMICAL');
+      else
+      alert('Not eligible');
+   }
+   else
+   alert("enter valid input");
+    }
+    else{
+    if(!isNaN(fname)){
+      if(fname<5000)
+      alert('All branch');
+      else if(fname>=5000 && fname<10000)
+      alert('All branch except CSE');
+      else if(fname>=10000 && fname<15000)
+      alert('ME,EE,META,CIVIL,CHEMICAL');
+      else if(fname>=15000 && fname<20000)
+      alert('CIVIL,META,CHEMICAL');
+      else if(fname<25000)
+      alert('META,CHEMICAL');
+      else
+      alert('Not eligible');
+   }
+   else
+   alert("enter valid input");
+  }
+}
+  else{
+    if(female=='fm'){
+      if(!isNaN(fname)){
+      if(fname<5000)
+      alert('All branch');
+      else if(fname>=5000 && fname<10000)
+      alert('All branch except CSE');
+      else if(fname>=10000 && fname<15000)
+      alert('ME,EE,META,CIVIL,CHEMICAL');
+      else if(fname>=15000 && fname<20000)
+      alert('CIVIL,META,CHEMICAL');
+      else if(fname<25000)
+      alert('META,CHEMICAL');
+      else
+      alert('Not eligible');
+   }
+   else
+   alert("enter valid input");
+    }
+    else{
+    if(!isNaN(fname)){
+      if(fname<5000)
+      alert('All branch');
+      else if(fname>=5000 && fname<10000)
+      alert('All branch except CSE');
+      else if(fname>=10000 && fname<15000)
+      alert('ME,EE,META,CIVIL,CHEMICAL');
+      else if(fname>=15000 && fname<20000)
+      alert('CIVIL,META,CHEMICAL');
+      else if(fname<25000)
+      alert('META,CHEMICAL');
+      else
+      alert('Not eligible');
+   }
+   else
+   alert("enter valid input");
+  }
+}
+}
+    
+      
+else if(category=='o'){
+  if(quota=='hs'){
+    if(female=='fm'){
+      if(!isNaN(fname)){
+      if(fname<8000)
+      alert('All branch');
+      else if(fname>=8000 && fname<10000)
+      alert('All branch except CSE');
+      else if(fname>=10000 && fname<15000)
+      alert('ME,EE,META,CIVIL,CHEMICAL');
+      else if(fname>=15000 && fname<20000)
+      alert('CIVIL,META,CHEMICAL');
+      else if(fname<25000)
+      alert('META,CHEMICAL');
+      else
+      alert('Not eligible');
+   }
+   else
+   alert("enter valid input");
+    }
+    else{
+    if(!isNaN(fname)){
+      if(fname<5000)
+      alert('All branch');
+      else if(fname>=5000 && fname<10000)
+      alert('All branch except CSE');
+      else if(fname>=10000 && fname<15000)
+      alert('ME,EE,META,CIVIL,CHEMICAL');
+      else if(fname>=15000 && fname<20000)
+      alert('CIVIL,META,CHEMICAL');
+      else if(fname<25000)
+      alert('META,CHEMICAL');
+      else
+      alert('Not eligible');
+   }
+   else
+   alert("enter valid input");
+  }
+}
+  else{
+    if(female=='fm'){
+      if(!isNaN(fname)){
+      if(fname<5000)
+      alert('All branch');
+      else if(fname>=5000 && fname<10000)
+      alert('All branch except CSE');
+      else if(fname>=10000 && fname<15000)
+      alert('ME,EE,META,CIVIL,CHEMICAL');
+      else if(fname>=15000 && fname<20000)
+      alert('CIVIL,META,CHEMICAL');
+      else if(fname<25000)
+      alert('META,CHEMICAL');
+      else
+      alert('Not eligible');
+   }
+   else
+   alert("enter valid input");
+    }
+    else{
+    if(!isNaN(fname)){
+      if(fname<5000)
+      alert('All branch');
+      else if(fname>=5000 && fname<10000)
+      alert('All branch except CSE');
+      else if(fname>=10000 && fname<15000)
+      alert('ME,EE,META,CIVIL,CHEMICAL');
+      else if(fname>=15000 && fname<20000)
+      alert('CIVIL,META,CHEMICAL');
+      else if(fname<25000)
+      alert('META,CHEMICAL');
+      else
+      alert('Not eligible');
+   }
+   else
+   alert("enter valid input");
+  }
+}
+}
+    
+      
+else if(category=='s'){
+  if(quota=='hs'){
+    if(female=='fm'){
+      if(!isNaN(fname)){
+      if(fname<8000)
+      alert('All branch');
+      else if(fname>=8000 && fname<10000)
+      alert('All branch except CSE');
+      else if(fname>=10000 && fname<15000)
+      alert('ME,EE,META,CIVIL,CHEMICAL');
+      else if(fname>=15000 && fname<20000)
+      alert('CIVIL,META,CHEMICAL');
+      else if(fname<25000)
+      alert('META,CHEMICAL');
+      else
+      alert('Not eligible');
+   }
+   else
+   alert("enter valid input");
+    }
+    else{
+    if(!isNaN(fname)){
+      if(fname<5000)
+      alert('All branch');
+      else if(fname>=5000 && fname<10000)
+      alert('All branch except CSE');
+      else if(fname>=10000 && fname<15000)
+      alert('ME,EE,META,CIVIL,CHEMICAL');
+      else if(fname>=15000 && fname<20000)
+      alert('CIVIL,META,CHEMICAL');
+      else if(fname<25000)
+      alert('META,CHEMICAL');
+      else
+      alert('Not eligible');
+   }
+   else
+   alert("enter valid input");
+  }
+}
+  else{
+    if(female=='fm'){
+      if(!isNaN(fname)){
+      if(fname<5000)
+      alert('All branch');
+      else if(fname>=5000 && fname<10000)
+      alert('All branch except CSE');
+      else if(fname>=10000 && fname<15000)
+      alert('ME,EE,META,CIVIL,CHEMICAL');
+      else if(fname>=15000 && fname<20000)
+      alert('CIVIL,META,CHEMICAL');
+      else if(fname<25000)
+      alert('META,CHEMICAL');
+      else
+      alert('Not eligible');
+   }
+   else
+   alert("enter valid input");
+    }
+    else{
+    if(!isNaN(fname)){
+      if(fname<5000)
+      alert('All branch');
+      else if(fname>=5000 && fname<10000)
+      alert('All branch except CSE');
+      else if(fname>=10000 && fname<15000)
+      alert('ME,EE,META,CIVIL,CHEMICAL');
+      else if(fname>=15000 && fname<20000)
+      alert('CIVIL,META,CHEMICAL');
+      else if(fname<25000)
+      alert('META,CHEMICAL');
+      else
+      alert('Not eligible');
+   }
+   else
+   alert("enter valid input");
+  }
+}
+}
+    
+      
+else if(category=='p'){
+  if(quota=='hs'){
+    if(female=='fm'){
+      if(!isNaN(fname)){
+      if(fname<8000)
+      alert('All branch');
+      else if(fname>=8000 && fname<10000)
+      alert('All branch except CSE');
+      else if(fname>=10000 && fname<15000)
+      alert('ME,EE,META,CIVIL,CHEMICAL');
+      else if(fname>=15000 && fname<20000)
+      alert('CIVIL,META,CHEMICAL');
+      else if(fname<25000)
+      alert('META,CHEMICAL');
+      else
+      alert('Not eligible');
+   }
+   else
+   alert("enter valid input");
+    }
+    else{
+    if(!isNaN(fname)){
+      if(fname<5000)
+      alert('All branch');
+      else if(fname>=5000 && fname<10000)
+      alert('All branch except CSE');
+      else if(fname>=10000 && fname<15000)
+      alert('ME,EE,META,CIVIL,CHEMICAL');
+      else if(fname>=15000 && fname<20000)
+      alert('CIVIL,META,CHEMICAL');
+      else if(fname<25000)
+      alert('META,CHEMICAL');
+      else
+      alert('Not eligible');
+   }
+   else
+   alert("enter valid input");
+  }
+}
+  else{
+    if(female=='fm'){
+      if(!isNaN(fname)){
+      if(fname<5000)
+      alert('All branch');
+      else if(fname>=5000 && fname<10000)
+      alert('All branch except CSE');
+      else if(fname>=10000 && fname<15000)
+      alert('ME,EE,META,CIVIL,CHEMICAL');
+      else if(fname>=15000 && fname<20000)
+      alert('CIVIL,META,CHEMICAL');
+      else if(fname<25000)
+      alert('META,CHEMICAL');
+      else
+      alert('Not eligible');
+   }
+   else
+   alert("enter valid input");
+    }
+    else{
+    if(!isNaN(fname)){
+      if(fname<5000)
+      alert('All branch');
+      else if(fname>=5000 && fname<10000)
+      alert('All branch except CSE');
+      else if(fname>=10000 && fname<15000)
+      alert('ME,EE,META,CIVIL,CHEMICAL');
+      else if(fname>=15000 && fname<20000)
+      alert('CIVIL,META,CHEMICAL');
+      else if(fname<25000)
+      alert('META,CHEMICAL');
+      else
+      alert('Not eligible');
+   }
+   else
+   alert("enter valid input");
+  }
+}
+}
+ 
+   
+}
+}
+
+    
+
   </script>
 </body>
 </html>
