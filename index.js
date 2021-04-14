@@ -24,12 +24,14 @@ app.post("/sign_up",(req,res)=>{
     var email = req.body.email;
     var phno = req.body.phno;
     var password = req.body.password;
+    var doubt = req.body.doubt;
 
     var data = {
         "name": name,
         "email" : email,
         "phno": phno,
-        "password" : password
+        "password" : password,
+       "doubt":doubt
     }
 
     db.collection('users').insertOne(data,(err,collection)=>{

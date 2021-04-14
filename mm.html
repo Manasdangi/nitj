@@ -22,7 +22,7 @@ input[type=text], select {
 
 input[type=submit] {
   width: 100%;
-  background-color: #4CAF50;
+  background-color:cornflowerblue;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -32,15 +32,15 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  background-color: #45a049;
+  background-color:dodgerblue;
 }
 
 .m{
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 10px;
-  width:40%;
-  margin:auto;
+  width:30%;
+  margin:auto ;
 
 }
 #id{
@@ -49,18 +49,40 @@ input[type=submit]:hover {
 #k{
   text-align: center;
 }
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color:purple;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 40px ;
+  letter-spacing: 3px;
+  cursor: pointer;
+}
 
+.button1 {
+  background-color: rgb(80, 56, 56); 
+  color: black; 
+  border: 2px solid #0c0f0c;
+}
 
 </style>
 </head>
 <body>
 
 <br>
-<BR><BR>
+<BR>
+  <p><a href="index.html"  >
+    <button class="button button1"  >Back to Home Page</button></a></p>
+   
 <div class="m">
+  
   <p style="text-align: center;">BRANCH PREDICTOR</p>
   <form >
-   <input type="text" id="fname" name="firstname" placeholder="Enter your jee main rank">
+   <input type="text" id="fname" name="firstname" placeholder="Enter your jee main CRL">
    <select name="ctgry" id="category">
     <option value="g">General</option>
     <option value="e">EWS</option>
@@ -76,6 +98,7 @@ input[type=submit]:hover {
     <option value="fm">Female </option>
     <option value="nfm">Female-neutral</option>
   </select> 
+  
    <input type="submit" value="Submit" onclick="calcy()">
    
     <p id="show"></p>
