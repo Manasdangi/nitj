@@ -4,6 +4,9 @@ var requests = require("requests");
 var express = require("express")
 var bodyParser = require("body-parser")
 var mongoose = require("mongoose")
+const hostname = '127.0.0.1';
+const port = 3000;
+
 const app = express()
 
 app.use(bodyParser.json())
@@ -47,7 +50,6 @@ app.post("/sign_up",(req,res)=>{
 
 
 
-app.listen(3500,"127.0.0.1");
-
-
-console.log("Listening on PORT 3500");
+app.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
