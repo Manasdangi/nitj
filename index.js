@@ -1,3 +1,6 @@
+const http = require("http");
+const fs =require("fs");
+var requests = require("requests");
 var express = require("express")
 var bodyParser = require("body-parser")
 var mongoose = require("mongoose")
@@ -15,23 +18,21 @@ mongoose.connect('mongodb://localhost:27017/mydb',{
 });
 
 var db = mongoose.connection;
-
 db.on('error',()=>console.log("Error in Connecting to Database"));
 db.once('open',()=>console.log("Connected to Database"))
 
 app.post("/sign_up",(req,res)=>{
     var name = req.body.name;
-    var email = req.body.email;
+    var userid = req.body.userid;
     var phno = req.body.phno;
-    var password = req.body.password;
-    var doubt = req.body.doubt;
-
+    var query = req.body.query;
+    
     var data = {
         "name": name,
-        "email" : email,
+        "userid" : userid,
         "phno": phno,
-        "password" : password,
-       "doubt":doubt
+        "query" : query,
+       
     }
 
     db.collection('users').insertOne(data,(err,collection)=>{
@@ -40,18 +41,13 @@ app.post("/sign_up",(req,res)=>{
         }
         console.log("Record Inserted Successfully");
     });
-
-    return res.redirect('signup_success.html')
+   return res.redirect('signup_success.html')
 
 })
 
 
-app.get("/",(req,res)=>{
-    res.set({
-        "Allow-access-Allow-Origin": '*'
-    })
-    return res.redirect('index.html');
-}).listen(3500);
+
+app.listen(3500,"127.0.0.1");
 
 
 console.log("Listening on PORT 3500");
