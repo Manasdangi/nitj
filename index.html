@@ -213,8 +213,9 @@ section{
      <li><a href="http://127.0.0.1:3000/">CONTACT US</a></li>
      <li><a href="clubs and society.html"> CLUBS AND SOCIETIES</a></li>
       <li><a href="fests and event.html">EVENTS AND FESTS</a></li>
-      <li><a href="mm.html">BRANCH PREDICTOR</a></li>
+      <li><a href="branchchecker.html">BRANCH PREDICTOR</a></li>
    </ul>
+   
  <p class="third" style="letter-spacing:2px;border: 1px solid gray;
   padding: 8px;"> It is an institute of national importance.It was established in 1963.Formerly known as Malaviya Regional Engineering College(MREC),Jaipur .
  Its motto is "Yogah Karmasu Kaushalam".Also known as Mnit jaipur.
@@ -301,28 +302,6 @@ It is one of the top 10 Nits.Its NIRF ranking is 35th. Its campus area is approx
 
 </div>
 
-<script>
-var slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 1000); // Change image every 2 seconds
-}
-</script>
-
 <div class="container">
   <div class="embed-responsive embed-responsive-16by9"><iframe width="180" height="100" src="https://www.youtube.com/embed/6z7dYISoMqw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>  </pre>
@@ -334,34 +313,37 @@ It is one of the top 10 Nits.Its NIRF ranking is 35th. Its campus area is approx
 <a  href="http://mnit.ac.in/" target="_blank" class="official">link to official website</a>
 <footer>
   <p >developed by MANAS DANGI<br>
+    <!-- social media handle -->
 <a  href="https://www.instagram.com/sunn_manas/" target="_blank" class="fa fa-instagram"></a>
 <a  href="https://www.linkedin.com/in/manas-raj-9287051b1/" target="_blank"class="fa fa-linkedin"></a>
 <a  href="https://github.com/settings/profile" target="_blank"class="fa fa-github"></a>
-  <span><script type="text/javascript" >
-  function display_c(){
-  var refresh=1; // Refresh rate in milli seconds
-  mytime=setTimeout('display_ct()',refresh)
+
+
+<script>
+  var slideIndex = 0;
+  showSlides();
+  
+  function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 1000); // Change image every 2 seconds
   }
-  function display_ct() {
-  var x = new Date()
-  document.getElementById('ct').innerHTML = x;
-  display_c();
-   }
-  </script></span>
-<script type="text/javascript" >
-function display_c(){
-var refresh=1; // Refresh rate in milli seconds
-mytime=setTimeout('display_ct()',refresh)
-}
-function display_ct() {
-var x = new Date()
-document.getElementById('ct').innerHTML = x;
-display_c();
- }
-</script>
+  </script>
+  
 </p><span style="font-size:small;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" id='ct' ></span>
 </footer>
-<body onload=display_ct();>
+<body >
 
 </body>
 </html>
